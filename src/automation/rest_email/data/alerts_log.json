@@ -1,0 +1,68 @@
+[
+    {
+        "vital_signs": {
+            "device_id": "cardioia_watch_001",
+            "patient_id": "patient_001",
+            "temperature_c": 37.4,
+            "heart_rate_bpm": 132,
+            "movement_detected": false,
+            "emergency_button_pressed": true,
+            "timestamp": "2026-05-10T16:02:33.714772"
+        },
+        "risk_result": {
+            "risk_level": "CRITICAL",
+            "alert_count": 3,
+            "alerts": [
+                {
+                    "type": "TACHYCARDIA",
+                    "severity": "HIGH",
+                    "message": "Taquicardia detectada: 132 BPM"
+                },
+                {
+                    "type": "NO_MOVEMENT",
+                    "severity": "MEDIUM",
+                    "message": "Ausência de movimento detectada"
+                },
+                {
+                    "type": "EMERGENCY_BUTTON",
+                    "severity": "CRITICAL",
+                    "message": "Botão de emergência acionado pelo paciente"
+                }
+            ]
+        },
+        "email_sent": true
+    },
+    {
+        "vital_signs": {
+            "device_id": "cardioia_watch_001",
+            "patient_id": "patient_001",
+            "temperature_c": 37.4,
+            "heart_rate_bpm": 132,
+            "movement_detected": false,
+            "emergency_button_pressed": true,
+            "timestamp": "2026-05-10T16:47:04.031165"
+        },
+        "risk_result": {
+            "risk_level": "CRITICAL",
+            "alert_count": 3,
+            "alerts": [
+                {
+                    "type": "TACHYCARDIA",
+                    "severity": "HIGH",
+                    "message": "Taquicardia detectada: 132 BPM"
+                },
+                {
+                    "type": "NO_MOVEMENT",
+                    "severity": "MEDIUM",
+                    "message": "Ausência de movimento detectada"
+                },
+                {
+                    "type": "EMERGENCY_BUTTON",
+                    "severity": "CRITICAL",
+                    "message": "Botão de emergência acionado pelo paciente"
+                }
+            ]
+        },
+        "email_sent": true
+    }
+]

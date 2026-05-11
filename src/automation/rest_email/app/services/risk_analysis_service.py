@@ -10,7 +10,7 @@ GROUP: São Paulo e Interior
 from app.config import Config
 from app.models.vital_signs import VitalSigns
 
-class RiskAnalysisSerice:
+class RiskAnalysisService:
     @staticmethod
     def analyze(vital_signs: VitalSigns) -> dict:
         # List of alerts detected locally by the API.
@@ -33,7 +33,7 @@ class RiskAnalysisSerice:
             })
 
         # Rule 3: Absence of movement
-        if not vital_signs.moviment_detected:
+        if not vital_signs.movement_detected:
             alerts.append({
                 "type": "NO_MOVEMENT",
                 "severity": "MEDIUM",

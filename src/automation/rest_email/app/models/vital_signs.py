@@ -45,4 +45,3 @@ class VitalSigns:
             "emergency_button_pressed": self.emergency_button_pressed,
             "timestamp": self.timestamp 
         }
-

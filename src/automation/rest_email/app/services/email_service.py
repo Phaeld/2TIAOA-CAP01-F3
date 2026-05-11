@@ -14,7 +14,7 @@ from app.models.vital_signs import VitalSigns
 
 class EmailService:
     @staticmethod
-    def send_alert_email(vital_sign: VitalSigns, risk_result: dict) -> bool:
+    def send_alert_email(vital_signs: VitalSigns, risk_result: dict) -> bool:
         subject = f"[CardioIA] Alerta {risk_result['risk_level']} - Paciente {vital_signs.patient_id}"
         body = EmailService._build_email_body(vital_signs, risk_result)
 
@@ -60,7 +60,7 @@ class EmailService:
         return f"""
 ALERTA AUTOMATIZADO - CARDIOIA
 
-Paciente: {vital_signs.pacient_id}
+Paciente: {vital_signs.patient_id}
 Dispositivo: {vital_signs.device_id}
 Data/Hora: {vital_signs.timestamp}
 

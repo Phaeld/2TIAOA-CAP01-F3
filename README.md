@@ -256,4 +256,112 @@ Além disso, demonstra como sistemas de saúde digital podem:
 
 ## Ir além 2 — Inteligência Artificial em séries temporais de saúde
 
-Em processo...
+
+### Objetivo
+
+O módulo Ir Além 2 do projeto CardioIA tem como objetivo explorar técnicas de Inteligência Artificial aplicadas à classificação de séries temporais de saúde, comparando uma abordagem tradicional de Machine Learning com uma abordagem inspirada em computação neuromórfica.
+
+O experimento utiliza um conjunto de dados sintéticos simulando sinais fisiológicos coletados por um dispositivo vestível inteligente, semelhante a um smartwatch de monitoramento cardíaco.
+
+O pipeline foi desenvolvido em Python e estruturado para executar:
+
+- carregamento de dados;
+- tratamento e padronização;
+- análise exploratória;
+- construção de janelas temporais;
+- treinamento de modelos;
+- avaliação de métricas;
+- geração automática de gráficos e relatórios.
+
+---
+
+O objetivo principal do Ir Além 2 é comparar o desempenho entre:
+
+- um modelo tradicional de classificação:
+  - **Regressão Logística (Logistic Regression)**;
+
+- um modelo inspirado em neurônios biológicos:
+  - **Leaky Integrate-and-Fire (LIF Spike Classifier)**.
+
+A proposta busca analisar como diferentes abordagens computacionais podem interpretar padrões fisiológicos presentes em séries temporais sintéticas de saúde.
+
+---
+
+# Estrutura do Projeto
+
+```text
+go_beyond2/
+│
+├── data/
+│   ├── raw/
+│   │   └── cardioia_dataset/
+│   │       ├── All/
+│   │       │   └── cardioia_synthetic_300_records.csv
+│   │       ├── Normal/
+│   │       ├── Medium/
+│   │       ├── High/
+│   │       └── Critical/
+│   │
+│   └── processed/
+│
+├── outputs/
+│   ├── figures/
+│   ├── metrics/
+│   └── predictions/
+│
+└── notebook/
+    └── cardioia_ir_alem2.ipynb
+````
+
+Disponível em: https://drive.google.com/drive/folders/1Tc05E1tgk53SHbgRkiBv3w0mi6oge0tu?usp=sharing
+
+---
+
+# Dataset Utilizado
+
+O dataset utilizado foi desenvolvido para fins acadêmicos e experimentais, utilizando para geração de dados o ChatGPT na versão 5.4.
+
+As variáveis simuladas incluem:
+
+| Variável          | Descrição                     |
+| ----------------- | ----------------------------- |
+| timestamp         | Data e horário do registro    |
+| temperature       | Temperatura corporal/ambiente |
+| heart_rate        | Frequência cardíaca (BPM)     |
+| movement_level    | Intensidade de movimento      |
+| movement_detected | Detecção de movimento         |
+| emergency_alert   | Botão de emergência           |
+| risk_level        | Classe de risco               |
+
+As classes de risco utilizadas foram:
+
+* normal
+* medium
+* high
+* critical
+
+---
+
+<br>
+
+# Como Executar
+
+### Abrir no Google Colab
+
+1. Faça upload do notebook no Google Colab. Localizado em [src/ai/go_beyond2.ipynb](src/ai/go_beyond2.ipynb)
+
+2. Execute o código de acordo com as céculas:
+   - Google Drive Mount
+   - Imports
+   - Paths
+   - Dataset Loading
+   - Preprocessing
+   - Time Windows
+   - Logistic Regression
+   - LIF Spike Classifier
+   - Metrics and Analysis 
+
+
+## Licença
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
